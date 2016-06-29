@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>581886617782-r178qh4uf5csuh59p2a0gqcb1h00ntod.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.581886617782-r178qh4uf5csuh59p2a0gqcb1h00ntod</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAQ4CM44f77AphQfarq98Exex9w82kajjs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>581886617782</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.MaranathApp.ToDoList</string>
+	<key>PROJECT_ID</key>
+	<string>todo-list-47ac4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>todo-list-47ac4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:581886617782:ios:99f6c2eace8d9eb1</string>
+	<key>DATABASE_URL</key>
+	<string>https://todo-list-47ac4.firebaseio.com</string>
+</dict>
+</plist>
