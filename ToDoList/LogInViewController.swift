@@ -10,6 +10,10 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet weak var passwordTextField: CustomizableTextField!
+    @IBOutlet weak var emailTextField: CustomizableTextField!
+    let networkingService = NetworkingService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,4 +23,14 @@ class LogInViewController: UIViewController {
    
     @IBAction func unwindToLogIn(storyboard:UIStoryboardSegue){
     }
+    
+    
+    
+    @IBAction func logInAction(sender: AnyObject) {
+        networkingService.signIn(emailTextField.text!, password: passwordTextField.text!)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home")
+        presentViewController(vc, animated: true, completion: nil)
+    }
+    
+   
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="u8N-bK-CXP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -9,7 +9,7 @@
         <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="LogInViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -32,21 +32,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uE6-qd-ibF" customClass="CustomizableButton" customModule="ToDoList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="129" width="280" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Log In">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="u8N-bK-CXP" kind="modal" id="yBA-jy-Kzo"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUv-0r-cAh" customClass="CustomizableButton" customModule="ToDoList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="182" width="280" height="45"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,6 +73,21 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uE6-qd-ibF" customClass="CustomizableButton" customModule="ToDoList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="129" width="280" height="45"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="logInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IMH-7s-1Xv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -115,6 +115,10 @@
                             <constraint firstItem="JaE-kC-cgO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tLz-2x-sWX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="5Ws-SV-uPE" id="FsZ-wX-Kvb"/>
+                        <outlet property="passwordTextField" destination="QMO-4c-7F1" id="s1D-jX-4N8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,6 +361,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetPasswordAction:" destination="Xfx-MJ-V46" eventType="touchUpInside" id="pJg-kK-U0Z"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBN-dP-MiX" customClass="CustomizableButton" customModule="ToDoList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="138" width="280" height="45"/>
@@ -412,6 +419,9 @@
                             <constraint firstItem="sxu-NP-cXz" firstAttribute="centerY" secondItem="19Y-xP-Pya" secondAttribute="centerY" id="sQN-dT-Vf0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="PcG-wW-5Bf" id="wFj-9l-9es"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Onm-wG-vhi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="OPb-FT-mba" userLabel="Exit" sceneMemberID="exit"/>
@@ -427,21 +437,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="F4P-0W-QYy">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="110" id="F4P-0W-QYy" customClass="TodoTableViewCell" customModule="ToDoList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="49.5" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F4P-0W-QYy" id="ZBT-K8-937">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOc-S1-pjv">
-                                            <rect key="frame" x="8" y="8" width="20" height="20"/>
-                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="1rO-oA-kKF"/>
-                                                <constraint firstAttribute="width" constant="20" id="sj4-gM-VEy"/>
-                                            </constraints>
-                                        </view>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="todo description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qfb-dR-MiU">
                                             <rect key="frame" x="8" y="65" width="304" height="45"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -467,6 +469,14 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOc-S1-pjv">
+                                            <rect key="frame" x="8" y="8" width="20" height="20"/>
+                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="1rO-oA-kKF"/>
+                                                <constraint firstAttribute="width" constant="20" id="sj4-gM-VEy"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="X4l-sL-DDQ" firstAttribute="top" secondItem="goU-0W-MUq" secondAttribute="bottom" constant="8" symbolic="YES" id="0bG-zI-wVa"/>
@@ -484,6 +494,12 @@
                                         <constraint firstItem="goU-0W-MUq" firstAttribute="trailing" secondItem="X4l-sL-DDQ" secondAttribute="trailing" id="wEj-cB-7rr"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="colorView" destination="nOc-S1-pjv" id="hFN-zy-FP7"/>
+                                    <outlet property="todoDescriptionTextView" destination="qfb-dR-MiU" id="hEg-yD-4jC"/>
+                                    <outlet property="todoItemName" destination="X4l-sL-DDQ" id="nwf-Ca-1cA"/>
+                                    <outlet property="usernameLabel" destination="goU-0W-MUq" id="nun-FT-l4k"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -504,10 +520,10 @@
             </objects>
             <point key="canvasLocation" x="1070" y="1111"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add New Todo-->
         <scene sceneID="ouI-eP-pnl">
             <objects>
-                <tableViewController id="NbQ-uT-fRd" sceneMemberID="viewController">
+                <tableViewController id="NbQ-uT-fRd" customClass="AddTodoTableViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="VZB-JX-0oW">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -522,7 +538,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Todo Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfa-3f-tvf">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Todo Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pfa-3f-tvf">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -570,11 +586,18 @@
                             <outlet property="delegate" destination="NbQ-uT-fRd" id="qwn-Ck-uUS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bko-vk-LSf">
+                    <navigationItem key="navigationItem" title="Add New Todo" id="bko-vk-LSf">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="A6Q-3A-PAk">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveAction:" destination="NbQ-uT-fRd" id="YCY-eR-jjI"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="dbN-hl-vHD" id="kJO-Xi-3nw"/>
+                        <outlet property="itemName" destination="pfa-3f-tvf" id="J8h-4b-lgC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHZ-Zz-EsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -583,7 +606,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="wFV-sF-X7X">
             <objects>
-                <tabBarController id="u8N-bK-CXP" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Home" id="u8N-bK-CXP" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="iRR-84-nEe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -625,7 +648,7 @@
         <!--My Profile-->
         <scene sceneID="Mct-Jv-W7e">
             <objects>
-                <viewController id="Vna-tM-dSV" sceneMemberID="viewController">
+                <viewController id="Vna-tM-dSV" customClass="MyProfileViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jdp-HE-r9T"/>
                         <viewControllerLayoutGuide type="bottom" id="WbW-kh-gHM"/>
@@ -646,14 +669,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Frezy" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S1f-8p-XZu">
-                                <rect key="frame" x="16" y="158" width="288" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="sQ7-e3-BGM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="maranathapp@outlook.com" placeholder="email" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="yPL-Xs-GeG">
                                 <rect key="frame" x="16" y="206" width="288" height="40"/>
                                 <constraints>
@@ -696,6 +711,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Frezy" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S1f-8p-XZu">
+                                <rect key="frame" x="16" y="158" width="288" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sQ7-e3-BGM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -722,7 +745,20 @@
                             <constraint firstItem="7A0-9Q-pQ1" firstAttribute="top" secondItem="H9a-Yk-iLZ" secondAttribute="bottom" constant="8" id="nBj-u8-yX4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Profile" id="NPr-Aj-dqy"/>
+                    <navigationItem key="navigationItem" title="My Profile" id="NPr-Aj-dqy">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="QkJ-Ud-VSj">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="logOutAction:" destination="Vna-tM-dSV" id="7A9-cO-oC5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="country" destination="H9a-Yk-iLZ" id="QEr-LO-ZMk"/>
+                        <outlet property="email" destination="yPL-Xs-GeG" id="QKr-gD-p2B"/>
+                        <outlet property="userImageView" destination="LbM-UA-23c" id="Fcl-Ri-5Tl"/>
+                        <outlet property="username" destination="S1f-8p-XZu" id="NxT-9s-sou"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRe-Ec-2eF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

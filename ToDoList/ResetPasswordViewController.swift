@@ -10,6 +10,10 @@ import UIKit
 
 class ResetPasswordViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: CustomizableTextField!
+    
+    let networkingService = NetworkingService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,5 +21,11 @@ class ResetPasswordViewController: UIViewController {
     }
 
   
+    @IBAction func resetPasswordAction(sender: AnyObject) {
+   
+    networkingService.resetPassword(emailTextField.text!)
+    }
+    
+    
 
 }

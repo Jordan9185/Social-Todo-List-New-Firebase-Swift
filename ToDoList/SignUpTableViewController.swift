@@ -16,7 +16,9 @@ class SignUpTableViewController: UITableViewController, UIImagePickerControllerD
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var userImageView: UIImageView!
     var pickerView: UIPickerView!
-    var countryArrays = [String]()
+    var countryArrays = [String]()    
+    var networkingService = NetworkingService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,23 +71,6 @@ class SignUpTableViewController: UITableViewController, UIImagePickerControllerD
         return 1
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
     @IBAction func choosePicture(sender: AnyObject) {
    
         let pickerController = UIImagePickerController()
@@ -128,6 +113,33 @@ class SignUpTableViewController: UITableViewController, UIImagePickerControllerD
         self.dismissViewControllerAnimated(true, completion: nil)
         self.userImageView.image = image
     }
+    
     @IBAction func signUpAction(sender: AnyObject) {
+        
+        let data = UIImageJPEGRepresentation(self.userImageView.image!, 0.8)
+        
+        networkingService.signUp(emailTextField.text!, username: usernameTextField.text!, password: passwordTextField.text!, country: countryTextField.text!, data: data!)
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home")
+        self.presentViewController(vc, animated: true, completion: nil)
+    
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

@@ -11,7 +11,6 @@
 		2779CAD91D2447E8003A49F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2779CAD71D2447E8003A49F9 /* Main.storyboard */; };
 		2779CADB1D2447E8003A49F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2779CADA1D2447E8003A49F9 /* Assets.xcassets */; };
 		2779CADE1D2447E8003A49F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2779CADC1D2447E8003A49F9 /* LaunchScreen.storyboard */; };
-		2779CAE61D2448CA003A49F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2779CAE51D2448CA003A49F9 /* GoogleService-Info.plist */; };
 		27BD6C9C1D244E8400C23503 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD6C9B1D244E8400C23503 /* LogInViewController.swift */; };
 		27BD6C9E1D244E9900C23503 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD6C9D1D244E9900C23503 /* SignUpTableViewController.swift */; };
 		27BD6CA01D244EA700C23503 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD6C9F1D244EA700C23503 /* ResetPasswordViewController.swift */; };
@@ -21,6 +20,12 @@
 		27BD6CAF1D2462DA00C23503 /* CustomizableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD6CAE1D2462DA00C23503 /* CustomizableImageView.swift */; };
 		27BD6CB21D24656600C23503 /* CustomizableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD6CB11D24656600C23503 /* CustomizableButton.swift */; };
 		27BD6CB41D2465FD00C23503 /* CustomizableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD6CB31D2465FD00C23503 /* CustomizableTextField.swift */; };
+		27D2BAC51D2717DC00B9E67B /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2BAC41D2717DC00B9E67B /* NetworkingService.swift */; };
+		27D2BACD1D2725C800B9E67B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27D2BACC1D2725C800B9E67B /* GoogleService-Info.plist */; };
+		27D2BAD01D272B4800B9E67B /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2BACE1D272B4800B9E67B /* MyProfileViewController.swift */; };
+		27D2BAD31D272F6800B9E67B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2BAD21D272F6800B9E67B /* User.swift */; };
+		27D2BADF1D2854D500B9E67B /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2BADE1D2854D500B9E67B /* Todo.swift */; };
+		27D2BAE11D285D3B00B9E67B /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2BAE01D285D3A00B9E67B /* TodoTableViewCell.swift */; };
 		A3D0FC0E84CD502689FEA949 /* Pods_ToDoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDAEFC85AA029B807A5F3AD /* Pods_ToDoList.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +36,6 @@
 		2779CADA1D2447E8003A49F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2779CADD1D2447E8003A49F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2779CADF1D2447E8003A49F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2779CAE51D2448CA003A49F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27BD6C9B1D244E8400C23503 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		27BD6C9D1D244E9900C23503 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		27BD6C9F1D244EA700C23503 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +45,12 @@
 		27BD6CAE1D2462DA00C23503 /* CustomizableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableImageView.swift; sourceTree = "<group>"; };
 		27BD6CB11D24656600C23503 /* CustomizableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableButton.swift; sourceTree = "<group>"; };
 		27BD6CB31D2465FD00C23503 /* CustomizableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableTextField.swift; sourceTree = "<group>"; };
+		27D2BAC41D2717DC00B9E67B /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		27D2BACC1D2725C800B9E67B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		27D2BACE1D272B4800B9E67B /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		27D2BAD21D272F6800B9E67B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		27D2BADE1D2854D500B9E67B /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		27D2BAE01D285D3A00B9E67B /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		4CDAEFC85AA029B807A5F3AD /* Pods_ToDoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		991F28C2B416FE18F63702A2 /* Pods-ToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoList/Pods-ToDoList.release.xcconfig"; sourceTree = "<group>"; };
 		B881FDF9A292B957C79A540D /* Pods-ToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoList/Pods-ToDoList.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,9 +106,9 @@
 		2779CAD21D2447E8003A49F9 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				27BD6CA71D244F1900C23503 /* ViewControllers */,
 				27BD6CB01D2462EA00C23503 /* Model */,
 				27BD6C9A1D244E6A00C23503 /* Supporting Files */,
-				27BD6CA71D244F1900C23503 /* ViewControllers */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -110,8 +120,8 @@
 				2779CADA1D2447E8003A49F9 /* Assets.xcassets */,
 				2779CADC1D2447E8003A49F9 /* LaunchScreen.storyboard */,
 				2779CADF1D2447E8003A49F9 /* Info.plist */,
-				2779CAE51D2448CA003A49F9 /* GoogleService-Info.plist */,
 				27BD6CA81D24533100C23503 /* user-placeholder.jpg */,
+				27D2BACC1D2725C800B9E67B /* GoogleService-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -125,6 +135,8 @@
 				27BD6C9F1D244EA700C23503 /* ResetPasswordViewController.swift */,
 				27BD6CA31D244ECA00C23503 /* AddTodoTableViewController.swift */,
 				27BD6CA51D244EDE00C23503 /* TodoListTableViewController.swift */,
+				27D2BACE1D272B4800B9E67B /* MyProfileViewController.swift */,
+				27D2BAE01D285D3A00B9E67B /* TodoTableViewCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -132,9 +144,12 @@
 		27BD6CB01D2462EA00C23503 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				27D2BAC41D2717DC00B9E67B /* NetworkingService.swift */,
+				27D2BAD21D272F6800B9E67B /* User.swift */,
 				27BD6CAE1D2462DA00C23503 /* CustomizableImageView.swift */,
 				27BD6CB11D24656600C23503 /* CustomizableButton.swift */,
 				27BD6CB31D2465FD00C23503 /* CustomizableTextField.swift */,
+				27D2BADE1D2854D500B9E67B /* Todo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -202,8 +217,8 @@
 			files = (
 				27BD6CA91D24533100C23503 /* user-placeholder.jpg in Resources */,
 				2779CADE1D2447E8003A49F9 /* LaunchScreen.storyboard in Resources */,
+				27D2BACD1D2725C800B9E67B /* GoogleService-Info.plist in Resources */,
 				2779CADB1D2447E8003A49F9 /* Assets.xcassets in Resources */,
-				2779CAE61D2448CA003A49F9 /* GoogleService-Info.plist in Resources */,
 				2779CAD91D2447E8003A49F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,10 +282,15 @@
 				27BD6CB21D24656600C23503 /* CustomizableButton.swift in Sources */,
 				27BD6C9E1D244E9900C23503 /* SignUpTableViewController.swift in Sources */,
 				27BD6CB41D2465FD00C23503 /* CustomizableTextField.swift in Sources */,
+				27D2BAD01D272B4800B9E67B /* MyProfileViewController.swift in Sources */,
 				27BD6C9C1D244E8400C23503 /* LogInViewController.swift in Sources */,
+				27D2BAC51D2717DC00B9E67B /* NetworkingService.swift in Sources */,
+				27D2BAE11D285D3B00B9E67B /* TodoTableViewCell.swift in Sources */,
 				2779CAD41D2447E8003A49F9 /* AppDelegate.swift in Sources */,
+				27D2BAD31D272F6800B9E67B /* User.swift in Sources */,
 				27BD6CA01D244EA700C23503 /* ResetPasswordViewController.swift in Sources */,
 				27BD6CA41D244ECA00C23503 /* AddTodoTableViewController.swift in Sources */,
+				27D2BADF1D2854D500B9E67B /* Todo.swift in Sources */,
 				27BD6CA61D244EDE00C23503 /* TodoListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
