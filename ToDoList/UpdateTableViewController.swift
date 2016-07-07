@@ -1,8 +1,8 @@
 //
-//  AddTodoViewController.swift
+//  UpdateTableViewController.swift
 //  ToDoList
 //
-//  Created by Frezy Stone Mboumba on 6/29/16.
+//  Created by Frezy Stone Mboumba on 7/3/16.
 //  Copyright © 2016 Frezy Stone Mboumba. All rights reserved.
 //
 
@@ -11,11 +11,12 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 
-class AddTodoTableViewController: UITableViewController {
+class UpdateTableViewController: UITableViewController {
 
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var itemName: UITextField!
- 
+    
+    var todo: Todo!
     
     var databaseRef: FIRDatabaseReference! {
         return FIRDatabase.database().reference()
@@ -23,23 +24,19 @@ class AddTodoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-    }
-
-
-    @IBAction func saveAction(sender: AnyObject) {
-    
-        // Create Todo Reference in the FirDatabase
-        let todoRef = databaseRef.child("allTodos").childByAutoId()
+        descriptionTextView.text = todo.content
+        itemName.text = todo.title
         
-        //Create the Colors for our Todo
+    }
     
-        let red = CGFloat(arc4random_uniform(UInt32(255.5)))/255.5
-        let blue = CGFloat(arc4random_uniform(UInt32(255.5)))/255.5
-        let green = CGFloat(arc4random_uniform(UInt32(255.5)))/255.5
-
+    
+    @IBAction func updateAction(sender: AnyObject) {
+                
+        //Create the Colors for our Todo
+      
         var title =  String()
         if itemName.text == ""{
             
@@ -63,29 +60,18 @@ class AddTodoTableViewController: UITableViewController {
         
         
         
-        let todo = Todo(title: title, content: content, username: FIRAuth.auth()!.currentUser!.displayName!, red: red, blue: blue, green: green)
+        let updatedTodo = Todo(title: title, content: content, username: FIRAuth.auth()!.currentUser!.displayName!, red: todo.red, blue: todo.blue, green: todo.green)
         
-        todoRef.setValue(todo.toAnyObject())
+        let key = todo.ref!.key
+        
+        let updateRef = databaseRef.child("/allTodos/\(key)")
+        
+        updateRef.updateChildValues(updatedTodo.toAnyObject())
         
         self.navigationController?.popToRootViewControllerAnimated(true)
         
-    
+        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
 }

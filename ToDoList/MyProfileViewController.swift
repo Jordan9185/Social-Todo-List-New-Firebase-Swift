@@ -14,6 +14,7 @@ import FirebaseStorage
 
 class MyProfileViewController: UIViewController {
 
+    @IBOutlet weak var password: UITextField!
     @IBOutlet weak var userImageView: CustomizableImageView!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var email: UITextField!
@@ -27,6 +28,56 @@ class MyProfileViewController: UIViewController {
         return FIRStorage.storage()
     }
     
+    @IBAction func updateEmailAction(sender: AnyObject) {
+    
+        if let user = FIRAuth.auth()?.currentUser {
+            
+            user.updateEmail(email.text!, completion: { (error) in
+                if let error = error{
+                    print(error.localizedDescription)
+                }else {
+                    let alertView = UIAlertView(title: "Update Email", message: "You have successfully updated your email", delegate: self, cancelButtonTitle: "OK, Thanks")
+                    alertView.show()
+                }
+            })
+        }
+    
+    
+    
+    
+    }
+    
+    @IBAction func updatePasswordAction(sender: AnyObject) {
+        
+        if let user = FIRAuth.auth()?.currentUser {
+            
+            user.updatePassword(password.text!, completion: { (error) in
+                if let error = error{
+                    print(error.localizedDescription)
+                }else {
+                    let alertView = UIAlertView(title: "Update Password", message: "You have successfully updated your password", delegate: self, cancelButtonTitle: "OK, Thanks")
+                    alertView.show()
+                }
+            })
+        }
+        
+        
+    }
+    
+    @IBAction func deleteAccount(sender: AnyObject) {
+        
+        let user = FIRAuth.auth()?.currentUser
+        user?.deleteWithCompletion({ (error) in
+            if let error = error{
+                print(error.localizedDescription)
+            }else {
+                let alertView = UIAlertView(title: "Delete Account", message: "You have successfully deleted your acoount. We are sorry to see you leaving us this way.", delegate: self, cancelButtonTitle: "OK, Thanks")
+                alertView.show()
+            }
+        })
+        
+    
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +95,7 @@ class MyProfileViewController: UIViewController {
                 let user = User(snapshot: snapshot)
                 self.username.text = user.username
                 self.country.text = user.country
-                self.email.text = user.email
+                self.email.text = FIRAuth.auth()?.currentUser?.email
                 
                 let imageUrl = String(user.photoUrl)
                 

@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
+import UIKit
 
 
 struct NetworkingService {
@@ -56,6 +57,7 @@ struct NetworkingService {
                 if let user = user {
                     
                     print("\(user.displayName!) has signed in succesfully!")
+                   
                 }
                 
             }else {
