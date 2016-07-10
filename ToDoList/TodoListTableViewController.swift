@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseInstanceID
+import FirebaseMessaging
 
 class TodoListTableViewController: UITableViewController {
 
@@ -24,7 +26,7 @@ class TodoListTableViewController: UITableViewController {
         super.viewDidLoad()
 
         
-        
+        FIRMessaging.messaging().subscribeToTopic("/topics/news")
         
         
         segmentedControl = HMSegmentedControl(sectionTitles: ["Todo","Posts"])

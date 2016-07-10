@@ -11,6 +11,8 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
+import FirebaseInstanceID
+import FirebaseMessaging
 
 class CommentTableViewController: UITableViewController {
 
@@ -49,6 +51,7 @@ class CommentTableViewController: UITableViewController {
             }) { (error) in
                 print(error.localizedDescription)
         }
+        
     }
     
     
@@ -121,6 +124,9 @@ class CommentTableViewController: UITableViewController {
             
         }
         
+FIRInstanceID.instanceID().getIDWithHandler { (string, error) in
+    print(string)
+        }
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         
         alertController.addAction(sendCommentAction)

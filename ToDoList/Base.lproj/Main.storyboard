@@ -523,7 +523,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="R0a-fC-9p7"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Post content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="smx-lm-MMA">
@@ -699,7 +699,7 @@
                                         <constraint firstAttribute="height" constant="21" id="fuB-5f-6qB"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -741,7 +741,7 @@
                                                 <constraint firstAttribute="width" constant="180" id="mEk-YK-a1w"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add comment" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o6l-k2-5W6">
@@ -875,7 +875,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHZ-Zz-EsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720" y="635"/>
+            <point key="canvasLocation" x="1362" y="433"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wFV-sF-X7X">
@@ -890,6 +890,7 @@
                     <connections>
                         <segue destination="TpN-iN-LP8" kind="relationship" relationship="viewControllers" id="vBO-hG-Nap"/>
                         <segue destination="TZ1-PF-gZ1" kind="relationship" relationship="viewControllers" id="9ln-qz-Vwe"/>
+                        <segue destination="K74-1U-8Bz" kind="relationship" relationship="viewControllers" id="olJ-WD-OYA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egC-XS-x3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1076,7 +1077,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRe-Ec-2eF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="1826"/>
+            <point key="canvasLocation" x="1627" y="1826"/>
+        </scene>
+        <!--AdMob -->
+        <scene sceneID="uTx-zb-smx">
+            <objects>
+                <viewController id="x5S-8s-GYI" customClass="AdMobViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GiZ-qn-dhX"/>
+                        <viewControllerLayoutGuide type="bottom" id="S7P-P7-4jL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nro-Ku-pGR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0r-GB-8bq" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="227" width="320" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ycO-ED-XRZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d0r-GB-8bq" firstAttribute="centerY" secondItem="nro-Ku-pGR" secondAttribute="centerY" id="K1z-1O-EGE"/>
+                            <constraint firstAttribute="trailing" secondItem="d0r-GB-8bq" secondAttribute="trailing" id="KKb-sU-RYz"/>
+                            <constraint firstItem="d0r-GB-8bq" firstAttribute="leading" secondItem="nro-Ku-pGR" secondAttribute="leading" id="f3k-xV-SdL"/>
+                            <constraint firstItem="d0r-GB-8bq" firstAttribute="centerX" secondItem="nro-Ku-pGR" secondAttribute="centerX" id="jcr-TN-KE8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AdMob " id="EAQ-LZ-3uw"/>
+                    <connections>
+                        <outlet property="bannerView" destination="d0r-GB-8bq" id="G77-H8-H35"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TuV-r3-Qzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="1858"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jkr-ie-kIk">
@@ -1099,7 +1137,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MbF-5d-1tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717" y="1826"/>
+            <point key="canvasLocation" x="1249" y="1826"/>
         </scene>
         <!--Update This Todo-->
         <scene sceneID="vBH-HE-IIR">
@@ -1182,7 +1220,30 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tWb-Gp-JjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="1247"/>
+            <point key="canvasLocation" x="2420" y="1247"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="GY5-Os-E16">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K74-1U-8Bz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="J8T-yC-Gge"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="0xu-wi-sZW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x5S-8s-GYI" kind="relationship" relationship="rootViewController" id="8dx-pK-8Gb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z33-eS-Iz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="1858"/>
         </scene>
     </scenes>
     <resources>
