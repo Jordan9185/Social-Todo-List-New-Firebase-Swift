@@ -28,8 +28,7 @@ class LogInViewController: UIViewController {
     
     @IBAction func logInAction(sender: AnyObject) {
         networkingService.signIn(emailTextField.text!, password: passwordTextField.text!)
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home")
-        presentViewController(vc, animated: true, completion: nil)
+        
     }
     
    

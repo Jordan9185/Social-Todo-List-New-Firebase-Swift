@@ -57,7 +57,10 @@ struct NetworkingService {
                 if let user = user {
                     
                     print("\(user.displayName!) has signed in succesfully!")
-                   
+                    
+                    let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                    appDel.logUser()
+              
                 }
                 
             }else {
@@ -99,7 +102,7 @@ struct NetworkingService {
                     if error == nil {
                        
                         self.saveInfo(user, username: username, password: password, country: country)
-                        
+                                                
                     }else{
                         print(error!.localizedDescription)
 
@@ -151,18 +154,7 @@ struct NetworkingService {
     }
  
 
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     
     
     

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 import FirebaseMessaging
 import FirebaseDatabase
 import FirebaseInstanceID
@@ -32,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.tokenRefreshNotification),
                                                          name: kFIRInstanceIDTokenRefreshNotification, object: nil)
         
+        logUser()
         return true
     }
     
@@ -87,4 +89,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Disconnected from FCM.")
     }
     // [END disconnect_from_fcm]
+    
+    
+    
+    
+   
+    
+    func logUser(){
+        
+        if FIRAuth.auth()!.currentUser != nil {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabBar = storyboard.instantiateViewControllerWithIdentifier("Home") as! UITabBarController
+            self.window?.rootViewController = tabBar
+        }
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

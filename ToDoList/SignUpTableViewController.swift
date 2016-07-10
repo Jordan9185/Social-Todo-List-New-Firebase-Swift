@@ -120,8 +120,6 @@ class SignUpTableViewController: UITableViewController, UIImagePickerControllerD
         
         networkingService.signUp(emailTextField.text!, username: usernameTextField.text!, password: passwordTextField.text!, country: countryTextField.text!, data: data!)
         
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home")
-        self.presentViewController(vc, animated: true, completion: nil)
     
     }
     
