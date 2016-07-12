@@ -57,6 +57,9 @@ class MyProfileViewController: UIViewController {
                 }else {
                     let alertView = UIAlertView(title: "Update Password", message: "You have successfully updated your password", delegate: self, cancelButtonTitle: "OK, Thanks")
                     alertView.show()
+                    
+                  
+
                 }
             })
         }
@@ -73,6 +76,8 @@ class MyProfileViewController: UIViewController {
             }else {
                 let alertView = UIAlertView(title: "Delete Account", message: "You have successfully deleted your acoount. We are sorry to see you leaving us this way.", delegate: self, cancelButtonTitle: "OK, Thanks")
                 alertView.show()
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login")
+                self.presentViewController(vc, animated: true, completion: nil)
             }
         })
         
